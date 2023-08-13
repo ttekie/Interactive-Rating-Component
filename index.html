@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" href="./css/rating.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <main>
+    <div id="main-rating-card">
+      <div class="icon-container">
+        <img class="rating-icon" src="./images/icon-star.svg" alt="star-logo">
+      </div>
+      <h1>How did we do?</h1>
+      <p>
+        Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!
+      </p>
+      <form action="#" id="rating-form">
+        <div class="rating-item">
+          <input type="radio" id="radio1" name="rating-btn" value="1">
+          <label for="radio1" class="rating-label">1</label>
+        </div>
+        <div class="rating-item">
+          <input type="radio" id="radio2" name="rating-btn" value="2">
+          <label for="radio2" class="rating-btn">2</label>
+        </div>
+        <div class="rating-item">
+          <input type="radio" id="radio3" name="rating-btn" value="3">
+          <label for="radio3" class="rating-label">3</label>
+        </div>
+        <div class="rating-item">
+          <input type="radio" id="radio4" name="rating-btn" value="4">
+          <label for="radio4" class="rating-label" value="4">4</label>
+        </div>
+        <div class="rating-item">
+          <input type="radio" id="radio5" name="rating-btn" value="5">
+          <label for="radio5" class="rating-label">5</label>
+        </div>
+        <button type="submit" class="button submit-btn">Submit</button>
+      </form>
+    </div>
+    <dialog>
+      <p>Please select a rating</p>
+      <button id="close-dialog" class="button close-btn">Close</button>
+    </dialog>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="./rating.js"></script>
+</body>
+</html>

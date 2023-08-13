@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+/* css custom variable */
+:root {
+   --white: hsl(0, 0%, 100%);
+   --light-grey: hsl(217, 12%, 63%);
+   --medium-grey: hsl(216, 12%, 54%);
+   --dark-blue: hsl(213, 19%, 18%);
+   --very-dark-blue: hsl(216, 12%, 8%);  
+   --orange: hsl(25, 97%, 53%);
+   --fw-regular: 400;
+   --fw-bold: 700;
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+html,
+body {
+   height: 100%;
+   font-family: 'Overpass', sans-serif;
+   background: var(--very-dark-blue);
+}
+main {
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+h1 {
+   color: var(--white);
+}
+p {
+   color: var(--light-grey);
+}
+/* rating card style */
+#main-rating-card {
+   width:27rem;
+   background: var(--dark-blue);
+   padding: 2rem;
+   border-radius: 10px;
+}
+.icon-container {
+   margin-bottom: 1.5rem;
+   width: 35px;
+   height: 35px;
+   background:var(--medium-grey);
+   border-radius: 50%;
+   display: grid;
+   place-content: center;
+}
+.rating-item {
+   display: inline-block;
+}
+.submit-btn {
+   display: block;
+   margin: 1rem auto 0;
+   padding: 0.7rem 10rem;
+   border-radius: 5px;
+   border: none;
+}
