@@ -18,6 +18,7 @@ The designs were created to the following widths:
 - White: hsl(0, 0%, 100%)
 - Light Grey: hsl(217, 12%, 63%)
 - Medium Grey: hsl(216, 12%, 54%)
+- Dark Grey: hsl(214, 12%, 45%)
 - Dark Blue: hsl(213, 19%, 18%)
 - Very Dark Blue: hsl(216, 12%, 8%)
 

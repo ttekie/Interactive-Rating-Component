@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap'); 
+/* sass custom variable */
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-grey: hsl(214, 12%, 25%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);  
+$orange: hsl(25, 97%, 53%);
+$fw-regular: 400;
+$fw-bold: 700;
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+} 
+
+html,
+body {
+   height: 100%;
+   font-family: 'Overpass', sans-serif;
+   background: $very-dark-blue;
+
+   main {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   } 
+} 
+
+
+/* rating card style */
+#rating-state-start{
+   width: 27rem;
+   background: $dark-blue;
+   padding: 2rem;
+   border-radius: 20px;
+
+   p {
+      color: $light-grey;
+   } 
+
+   h1 {
+      color: $white;
+   }
+}
+.icon-container {
+   margin-bottom: 1.5rem;
+   width: 35px;
+   height: 35px;
+   background: $dark-grey;
+   border-radius: 50%;
+   display: grid;
+   place-content: center;
+}
+/* inheritance */
+%radio-shared {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+}
+#form-container {
+   display: flex;
+}
+.rating-item {
+   display: flex;
+   // nested child element
+   input[type="radio"] {
+     @extend %radio-shared;
+     border: none;
+   }
+   // nested child element
+   .rating-label {
+      @extend %radio-shared;
+      display: grid;
+      place-content: center;
+      transform: translateX(-100%);
+      font-size: 1rem;
+      background-color: $dark-grey;
+      color: $light-grey;
+      outline: none;
+   }
+   .rating-label:hover {
+      background-color: $orange;
+      color: $white;
+   }
+}
+.submit-btn {
+   display: block;
+   margin: 1.8rem auto 0;
+   padding: 0.7rem 10rem;
+   border-radius: 20px;
+   border: none;
+   background-color: $orange;
+   color: $white;
+}
+.submit-btn:hover {
+   background-color: $white;
+   color: $orange;
+}
+
+#thank-you-state-start {
+   width: 27rem;
+   background: $dark-blue;
+   padding: 2rem;
+   border-radius: 20px;
+   /* change display to flex with js */
+   display: none;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   p:first-of-type {
+      color: $orange;
+      margin: 1.8rem 0;
+      background-color: $dark-grey;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+   } 
+   
+   h2 {
+      color: $white;
+   }
+
+   p:last-child {
+      color: $light-grey;
+      text-align: justify;
+      text-align-last: center;
+   }
+   .ratingActive {
+      background-color: $orange;
+   }
+}

@@ -1,61 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
-/* css custom variable */
-:root {
-   --white: hsl(0, 0%, 100%);
-   --light-grey: hsl(217, 12%, 63%);
-   --medium-grey: hsl(216, 12%, 54%);
-   --dark-blue: hsl(213, 19%, 18%);
-   --very-dark-blue: hsl(216, 12%, 8%);  
-   --orange: hsl(25, 97%, 53%);
-   --fw-regular: 400;
-   --fw-bold: 700;
-}
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+/* sass custom variable */
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 html,
 body {
-   height: 100%;
-   font-family: 'Overpass', sans-serif;
-   background: var(--very-dark-blue);
+  height: 100%;
+  font-family: "Overpass", sans-serif;
+  background: hsl(216, 12%, 8%);
 }
-main {
-   height: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+html main,
+body main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-h1 {
-   color: var(--white);
-}
-p {
-   color: var(--light-grey);
-}
+
 /* rating card style */
-#main-rating-card {
-   width:27rem;
-   background: var(--dark-blue);
-   padding: 2rem;
-   border-radius: 10px;
+#rating-state-start {
+  width: 27rem;
+  background: hsl(213, 19%, 18%);
+  padding: 2rem;
+  border-radius: 20px;
 }
+#rating-state-start p {
+  color: hsl(217, 12%, 63%);
+}
+#rating-state-start h1 {
+  color: hsl(0, 0%, 100%);
+}
+
 .icon-container {
-   margin-bottom: 1.5rem;
-   width: 35px;
-   height: 35px;
-   background:var(--medium-grey);
-   border-radius: 50%;
-   display: grid;
-   place-content: center;
+  margin-bottom: 1.5rem;
+  width: 35px;
+  height: 35px;
+  background: hsl(214, 12%, 25%);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
 }
+
+/* inheritance */
+.rating-item .rating-label, .rating-item input[type=radio] {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+#form-container {
+  display: flex;
+}
+
 .rating-item {
-   display: inline-block;
+  display: flex;
 }
+.rating-item input[type=radio] {
+  border: none;
+}
+.rating-item .rating-label {
+  display: grid;
+  place-content: center;
+  transform: translateX(-100%);
+  font-size: 1rem;
+  background-color: hsl(214, 12%, 25%);
+  color: hsl(217, 12%, 63%);
+  outline: none;
+}
+.rating-item .rating-label:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+
 .submit-btn {
-   display: block;
-   margin: 1rem auto 0;
-   padding: 0.7rem 10rem;
-   border-radius: 5px;
-   border: none;
+  display: block;
+  margin: 1.8rem auto 0;
+  padding: 0.7rem 10rem;
+  border-radius: 20px;
+  border: none;
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
 }
+
+.submit-btn:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+#thank-you-state-start {
+  width: 27rem;
+  background: hsl(213, 19%, 18%);
+  padding: 2rem;
+  border-radius: 20px;
+  /* change display to flex with js */
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#thank-you-state-start p:first-of-type {
+  color: hsl(25, 97%, 53%);
+  margin: 1.8rem 0;
+  background-color: hsl(214, 12%, 25%);
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+}
+#thank-you-state-start h2 {
+  color: hsl(0, 0%, 100%);
+}
+#thank-you-state-start p:last-child {
+  color: hsl(217, 12%, 63%);
+  text-align: justify;
+  text-align-last: center;
+}
+#thank-you-state-start .ratingActive {
+  background-color: hsl(25, 97%, 53%);
+}
+
+/*# sourceMappingURL=rating.css.map */
