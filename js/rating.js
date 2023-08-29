@@ -28,6 +28,7 @@ $(function() {
       rating = updatedRating;
    });
 
+   // listener function that listens when submit event is fired
    function onSubmitForm(e) {
       e.preventDefault();
       span.textContent = rating;
