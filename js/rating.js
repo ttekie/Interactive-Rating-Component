@@ -1,7 +1,10 @@
+// this function will run when the document is done loading
 $(function() {
+   // select elements from the DOM tree and store them in a variable 
    const form = document.querySelector('#rating-form');
    const submitBtn = document.querySelector('.submit-btn');
-   const ratingBtn = document.querySelectorAll('.rating-label');
+   // will return a node list(An array like object)
+   const ratingBtn = document.querySelectorAll('.rating-label'); 
    const ratingState = document.querySelector('#rating-state-start');
    const span = document.querySelector('span');
    const thankYouState = document.querySelector('#thank-you-state-start');
@@ -12,8 +15,11 @@ $(function() {
    function ratingValue(callback) {
       ratingBtn.forEach(btn => {
          btn.addEventListener('click', (e) => {
+            // reset rating dynamically 
             rating = e.target.textContent;
             callback(rating);
+            // the block of code within this condition only executes 
+            // if the condition is truthy 
             if(selectedBtn) {
                selectedBtn.style.backgroundColor = '';
             }
