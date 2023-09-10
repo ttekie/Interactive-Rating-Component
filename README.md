@@ -114,5 +114,5 @@ code snippets of the codes that I am proud off, see below:
 
 - Website - [Tesfalem Tekie](https://ttekie.github.io/portfolio/#)
 - Frontend Mentor - [@ttekie](https://www.frontendmentor.io/profile/ttekie)
-- Github - [@ttekie](https://www.twitter.com/yourusername)
+- Github - [@ttekie](https://github.com/ttekie)
 
